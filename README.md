@@ -6,7 +6,7 @@ Demostrando como funciona o dns interno dentro de um cluster kubernetes
 
 ![request caminho](img/requests.png)
 
-**ingress**: Faz o roteamento das requisicoes, o ingress é inteligente para saber qual service é responsavel por receber aquela requisição. No ingress é configurado qual dns ele é responsavel e qual service pode receber as requisicoes vinda daquele dns. 
+**INGRESS**: Faz o roteamento das requisicoes, o ingress é inteligente para saber qual service é responsavel por receber aquela requisição. No ingress é configurado qual dns ele é responsavel e qual service pode receber as requisicoes vinda daquele dns. 
 
 Temos dois tipos de ingress, um ingress do tipo _path_ e o outro do tipo _host_, o da imagem abaixo é do tipo _host_.
 
@@ -34,7 +34,9 @@ status:
   loadBalancer: {}
 ```
 
-**service**: O service é responsavel por pega a requisicoes e enviar para o pod. Ele sabe qual pod enviar atraves da label. Para os pods o service é a "porta" de entrada e saida de requisicoes por isso é importante que a configuracao do service esteja correta.
+
+
+**SERVICE**: O service é responsavel por pega a requisicoes e enviar para o pod. Ele sabe qual pod enviar atraves da label. Para os pods o service é a "porta" de entrada e saida de requisicoes por isso é importante que a configuracao do service esteja correta.
 
 Existe tres tipos de services, o da imagem abaixo é o do tipo ClusterIP. 
 ```
@@ -70,7 +72,9 @@ nginx        172.xx.xx.x:80,172.xx.xx.x:80       45s
 ```
 
 
-**pod**: é o menor objeto de uma estrutura k8bernetes e onde fica o(s) container(s) com a aplicacao.
+
+
+**POD**: é o menor objeto de uma estrutura k8bernetes e onde fica o(s) container(s) com a aplicacao.
 
 
 ## Comunicação Interna
